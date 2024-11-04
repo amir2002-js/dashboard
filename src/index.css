@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "primary";
+		src: url("/FONTS/IRANSansWeb_FaNum.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "primary-bold";
+		src: url("/public/FONTS/IRANSansWeb_FaNum_Bold.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "secondary";
+		src: url("/public/FONTS/PeydaFaNum-Medium.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "secondary-bold";
+		src: url("/public/FONTS/PeydaFaNum-Black.ttf") format("truetype");
+	}
+}
