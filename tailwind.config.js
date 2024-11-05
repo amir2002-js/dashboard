@@ -18,7 +18,7 @@ export default {
     },
     extend: {
       maxWidth : {
-        310:"1240px"
+        310:"1450px"
       },
       fontFamily:{
         "primary": "primary",

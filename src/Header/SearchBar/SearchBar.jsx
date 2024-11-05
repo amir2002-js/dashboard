@@ -6,7 +6,7 @@ export default function SearchBar() {
 			<form className="flex justify-center items-center w-full gap-4">
 				<label htmlFor="" className="w-6 flex place-content-center">
 					<IoSearch
-						className="text-Secondary text-xl p-1 "
+						className="text-Secondary text-2xl p-1 "
 						strokeWidth="15px"
 					/>
 				</label>

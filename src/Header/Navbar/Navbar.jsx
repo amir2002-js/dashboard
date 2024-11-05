@@ -39,7 +39,11 @@ export default function Navbar() {
 							}`}
 						>
 							{item.icon}
-							{item.title && <p className="line-clamp-1 truncate">{item.title}</p>}
+							{item.title && (
+								<p className="line-clamp-1 truncate">
+									{item.title}
+								</p>
+							)}
 						</button>
 					</li>
 				))}
