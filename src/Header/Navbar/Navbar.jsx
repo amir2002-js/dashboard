@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
 	IoChatboxOutline,
 	IoEllipsisHorizontalSharp,
@@ -5,9 +6,17 @@ import {
 	IoMoonOutline,
 	IoNotificationsOutline,
 	IoStarOutline,
+	IoSunnyOutline,
 } from "react-icons/io5";
+import Btn from "../../Components/Btn";
 
-export default function Navbar() {
+export default function Navbar({ changeMode }) {
+	const [isNight, setIsNight] = useState(false);
+
+	function changeNight() {
+		setIsNight((prevState) => !prevState);
+	}
+
 	const my_navbar = [
 		{ title: "", icon: <IoStarOutline className="text-xl" />, id: 2 },
 		{
@@ -15,11 +24,27 @@ export default function Navbar() {
 			icon: <IoNotificationsOutline className="text-xl" />,
 			id: 3,
 		},
-		{ title: "", icon: <IoMoonOutline className="text-xl" />, id: 4 },
+		{
+			title: "",
+			icon: isNight ? (
+				<IoSunnyOutline className="text-xl" />
+			) : (
+				<IoMoonOutline className="text-xl" />
+			),
+			id: 4,
+			onClick: () => {
+				changeMode();
+				changeNight();
+			},
+		},
 		{ title: "", icon: <IoChatboxOutline className="text-xl " />, id: 5 },
 		{
 			title: "log out",
-			icon: <IoLogOutOutline className="text-2xl" />,
+			icon: (
+				<p className="rotate-180">
+					<IoLogOutOutline className="text-2xl" />
+				</p>
+			),
 			id: 6,
 		},
 	];
@@ -31,20 +56,14 @@ export default function Navbar() {
 			<ul className="flex justify-end gap-4 items-center max-md:hidden">
 				{my_navbar.map((item) => (
 					<li key={item.id}>
-						<button
-							className={`flex gap-2 justify-center items-center rounded-lg  ${
-								!item.title
-									? "hover:bg-slate-100 p-1.5"
-									: "bg-slate-100 hover:bg-Primary hover:text-white transition-all duration-700 py-1 px-7"
-							}`}
-						>
-							{item.icon}
+						<Btn onClickHandler={item.onClick} title={item.title}>
+							<div className="dark:text-white">{item.icon}</div>
 							{item.title && (
-								<p className="line-clamp-1 truncate">
+								<div className="line-clamp-1 truncate dark:font-primary-bold">
 									{item.title}
-								</p>
+								</div>
 							)}
-						</button>
+						</Btn>
 					</li>
 				))}
 			</ul>

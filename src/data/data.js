@@ -110,3 +110,14 @@ export const navigatorLinks = [
 		],
 	},
 ];
+
+export const adminInformation = {
+	name: "نقی نقی زاده",
+	photo: "default",
+	subTitle: "Human Resources Department",
+	account: [
+		["فالوور ها", "9.5k", 1],
+		["تجربه", "2 سال", 2],
+		["فالو", "8.4k", 3],
+	],
+};

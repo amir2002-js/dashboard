@@ -15,7 +15,7 @@ export default function SearchBar() {
 					name=""
 					id=""
 					placeholder="جستجو ..."
-					className="w-full h-5 outline-none"
+					className="w-full h-5 outline-none bg-transparent"
 				/>
 			</form>
 		</div>
