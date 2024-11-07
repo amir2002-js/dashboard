@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header/Header";
 
 function App() {
-	const [darkMode, setDarkMode] = useState(true);
+	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
 		if (darkMode) {
