@@ -33,7 +33,7 @@ function App() {
 						showVisibleMenu={showVisibleMenu}
 					/>
 					<div
-						className={` absolute bg-white dark:bg-Primary-dark mx-2 p-2 top-16 right-0 left-0 border dark:border-dark-border border-light-border transition-all duration-700 ${
+						className={` absolute bg-white dark:bg-Primary-dark mx-2 p-2 top-16 right-0 left-0 border dark:border-dark-border border-light-border transition-transform duration-700 ${
 							isVisibleMenu
 								? "translate-y-0 opacity-100"
 								: "-translate-y-24 opacity-0"
